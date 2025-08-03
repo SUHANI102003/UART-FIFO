@@ -46,8 +46,15 @@ output done
  end  
 
 // next state logic
-assign done = (Q_reg == FINAL_VALUE);
+// Combinational next-state logic
+  always @(*) begin
+    if (Q_reg == FINAL_VALUE)
+      Q_next = 0;
+    else
+      Q_next = Q_reg + 1;
+  end
 
-always@(*)
-    Q_reg = done ? 'b0 : Q_reg + 1;
-endmodule
+  // Output
+  assign done = (Q_reg == FINAL_VALUE);
+  
+  endmodule
