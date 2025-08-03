@@ -50,7 +50,8 @@ output tx
         s_reg <= 0;
         n_reg <= 0;
         b_reg <= 0;
-        tx_reg <= 0;
+        tx_reg <= 1;
+        tx_done_tick <= 0;
     end
     else
     begin
@@ -70,6 +71,7 @@ output tx
     n_next = n_reg;
     b_next = b_reg;
     tx_next = tx_reg;
+    tx_done_tick = 1'b0;
     case(state_reg)
 //-----------------------------------------------//
         idle:
@@ -89,9 +91,10 @@ output tx
             if(s_tick)
                 if(s_reg==15)
                 begin
+                    state_next = data;
                     s_next = 0;
                     n_next = 0;
-                    state_next = data;
+                   
                 end
                 else
                     s_next = s_reg + 1;
@@ -122,6 +125,7 @@ output tx
                 begin
                     tx_done_tick = 1'b1;
                     state_next = idle;
+                    
                 end
                 else 
                     s_next = s_reg + 1;
