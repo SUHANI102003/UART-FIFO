@@ -62,13 +62,13 @@ It is asynchronous, meaning the transmitter and receiver **do not share a clock*
 ---
 
 ## 🧰 Working
-The serial transmission starts with a 'start bit' which is 0, followed by data bits, and ends with a 'parity bit' and a 'stop bit'. Transmission of a single byte is show in the following figure:
+The serial transmission starts with a 'start bit' which is 0, followed by data bits (1 byte), and ends with a 'stop bit'. Here, for simplicity we are not considering parity bits. Transmission of a single byte is show in the following figure:
 
 <img width = "700" height = "500" src = "https://github.com/SUHANI102003/UART-FIFO/blob/main/assets/Screenshot%202025-08-31%20034146.png" />
 
-The transfer is asynchronous, which mean that there is no clock information, therefore the receiver and transmitter must agree on what baud rate,stop bits and parity bit are used. In this example one byte will be transferred with a baud rate of 19,200, 1 stop bit and no parity bits.
+The transfer is asynchronous, which mean that there is no clock information, therefore the receiver and transmitter must agree on what baud rate,stop bits and parity bit are used. In this example one byte will be transferred with a baud rate of 9600, 1 stop bit and no parity bits.
 
-An oversampling scheme will be used to estimate the middle point of the data bit at a rate 16 times the baud rate, as shown in the figure below.
+An oversampling scheme of 16x will be used to estimate the middle point of the data bit at a rate 16 times the baud rate, as shown in the figure below.
 
 <img width = "700" height = "500" src = "https://github.com/SUHANI102003/UART-FIFO/blob/main/assets/Screenshot%202025-08-31%20034214.png" />
 
