@@ -13,6 +13,9 @@
 
 A Verilog-based **UART (Universal Asynchronous Receiver/Transmitter)** design integrated with **FIFO buffers** to enable efficient and reliable serial communication between devices.
 
+### UART
+A universal asynchronous receiver and transmitter (UART) is a circuit that sends and receives data through a serial line.
+
 ---
 
 ## ✨ Features
