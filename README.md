@@ -83,7 +83,7 @@ An oversampling scheme of 16x will be used to estimate the middle point of the d
 
 
 ### Transmitter ASMD Chart
-<img width = "700" height = "700" src = "https://github.com/SUHANI102003/UART-FIFO/blob/main/assets/Screenshot%202025-08-03%20074655.png" alt = "tx" />
+<img width = "700" height = "600" src = "https://github.com/SUHANI102003/UART-FIFO/blob/main/assets/Screenshot%202025-08-03%20074655.png" alt = "tx" />
 
 
 ### Receiver ASMD Chart
