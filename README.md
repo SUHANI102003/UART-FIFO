@@ -13,27 +13,67 @@
 
 A Verilog-based **UART (Universal Asynchronous Receiver/Transmitter)** design integrated with **FIFO buffers** to enable efficient and reliable serial communication between devices.
 
-### UART
-A universal asynchronous receiver and transmitter (UART) is a circuit that sends and receives data through a serial line. UART's are usually used with the RS-232 standard and contain a receiver and transmitter. However in this example only a receiver is used.
+### What is UART?
 
-The serial transmission starts with a 'start bit' which is 0, followed by data bits, and ends with a 'parity bit' and a 'stop bit'. Transmission of a single byte is show in the following figure:
+**UART (Universal Asynchronous Receiver/Transmitter)** is a hardware protocol for **serial communication**, transmitting and receiving data **one bit at a time**.  
+It is asynchronous, meaning the transmitter and receiver **do not share a clock**, but agree on a baud rate to interpret data correctly.
 
+**Key Points:**
+- Converts parallel data to serial and vice versa.  
+- Uses start and stop bits for synchronization.  
+- Supports full-duplex communication.  
+- Commonly used in microcontrollers, FPGAs, PCs, and peripherals.  
 
+### Why and Where is UART Used?
 
-The transfer is asynchronous, which mean that there is no clock information, therefore the receiver and transmitter must agree on what baud rate,stop bits and parity bit are used. In this example one byte will be transferred with a baud rate of 19,200, 1 stop bit and no parity bits.
+- **Why:** Simple, cost-effective, and reliable for short distances.  
+- **Where:** Communication between microcontrollers, FPGA boards, PCs, sensors, GPS modules, Bluetooth devices, ADCs, etc.
 
-An oversampling scheme will be used to estimate the middle point of the data bit at a rate 16 times the baud rate, as shown in the figure below.
+### Working with 16× Oversampling
+
+- Receiver samples the incoming data **16 times per bit period**.  
+- Allows detection of the **middle of each bit**, reducing timing errors.  
+- Example: For 9600 bps, the sampling clock runs at `9600 × 16 = 153600 Hz`.  
+- Start bit detection → sample data bits at 16× rate → stop bit verification.  
 
 ---
 
 ## ✨ Features
 
-- **Full-Duplex Communication**: Transmit and receive data simultaneously.  
-- **FIFO Buffers**: Smooth data handling between transmitter and receiver to prevent overflow or data loss.  
-- **Configurable Parameters**: Adjustable baud rate, data bits, stop bits, and parity options.  
-- **Self-Checking Testbenches**: Verify the functionality of UART and FIFO modules through simulation.  
+### UART Features
+- Asynchronous serial communication.  
+- Full-duplex support.  
+- Configurable data frame of 5–8 data bits, parity, 1–2 stop bits (Here, 8 data bits, no parity, 1 stop bit)
+- Simple hardware implementation.  
+- Reliable for short distances.  
+- Configurable baud rate.  
+- Supports error detection.  
+- Widely supported in embedded systems.  
+
+### FIFO Features
+- First-In-First-Out data handling.  
+- Temporary data storage between producer and consumer.  
+- Smooth operation in full-duplex systems.  
+- Configurable depth and width.  
+- Status signals: full, almost full, empty, almost empty.  
+- Reduces data loss during bursts.  
+- Hardware-friendly design for FPGA/ASIC systems.  
 
 ---
+
+## 🧰 Working
+The serial transmission starts with a 'start bit' which is 0, followed by data bits, and ends with a 'parity bit' and a 'stop bit'. Transmission of a single byte is show in the following figure:
+
+<img width = "700" height = "500" src = "https://github.com/SUHANI102003/UART-FIFO/blob/main/assets/Screenshot%202025-08-31%20034146.png" />
+
+The transfer is asynchronous, which mean that there is no clock information, therefore the receiver and transmitter must agree on what baud rate,stop bits and parity bit are used. In this example one byte will be transferred with a baud rate of 19,200, 1 stop bit and no parity bits.
+
+An oversampling scheme will be used to estimate the middle point of the data bit at a rate 16 times the baud rate, as shown in the figure below.
+
+<img width = "700" height = "500" src = "https://github.com/SUHANI102003/UART-FIFO/blob/main/assets/Screenshot%202025-08-31%20034214.png" />
+
+---
+
 
 ## Design Details
 
