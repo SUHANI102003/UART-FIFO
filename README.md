@@ -14,7 +14,15 @@
 A Verilog-based **UART (Universal Asynchronous Receiver/Transmitter)** design integrated with **FIFO buffers** to enable efficient and reliable serial communication between devices.
 
 ### UART
-A universal asynchronous receiver and transmitter (UART) is a circuit that sends and receives data through a serial line.
+A universal asynchronous receiver and transmitter (UART) is a circuit that sends and receives data through a serial line. UART's are usually used with the RS-232 standard and contain a receiver and transmitter. However in this example only a receiver is used.
+
+The serial transmission starts with a 'start bit' which is 0, followed by data bits, and ends with a 'parity bit' and a 'stop bit'. Transmission of a single byte is show in the following figure:
+
+
+
+The transfer is asynchronous, which mean that there is no clock information, therefore the receiver and transmitter must agree on what baud rate,stop bits and parity bit are used. In this example one byte will be transferred with a baud rate of 19,200, 1 stop bit and no parity bits.
+
+An oversampling scheme will be used to estimate the middle point of the data bit at a rate 16 times the baud rate, as shown in the figure below.
 
 ---
 
