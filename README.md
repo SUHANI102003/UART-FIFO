@@ -28,8 +28,15 @@ A Verilog-based **UART (Universal Asynchronous Receiver/Transmitter)** design in
 
 ### Block Diagram
 
+<img width = "700" height = "500" src = "https://github.com/SUHANI102003/UART-FIFO/blob/main/assets/Screenshot%202025-08-03%20052922.png" alt = "diagram" />
 
 
+### Transmitter ASMD Chart
+<img width = "700" height = "700" src = "https://github.com/SUHANI102003/UART-FIFO/blob/main/assets/Screenshot%202025-08-03%20074655.png" alt = "tx" />
+
+
+### Receiver ASMD Chart
+<img width = "700" height = "800" src = "https://github.com/SUHANI102003/UART-FIFO/blob/main/assets/Screenshot%202025-08-03%20063356.png" alt = "rx" />
 
 
 ## 📂 Directory Structure
@@ -43,8 +50,6 @@ A Verilog-based **UART (Universal Asynchronous Receiver/Transmitter)** design in
 └── README.md # Project documentation
 ```
 
-
-
 ---
 
 ## 🛠️ Module Details
@@ -57,7 +62,7 @@ A Verilog-based **UART (Universal Asynchronous Receiver/Transmitter)** design in
 
 ---
 
-## 💻 Simulation & Synthesis
+## 💻 Simulation 
 
 ### Requirements
 
@@ -70,12 +75,6 @@ A Verilog-based **UART (Universal Asynchronous Receiver/Transmitter)** design in
 2. Load testbenches into the simulator.  
 3. Run simulation and verify waveforms for correct data transfer.  
 
-### Synthesis Steps
-
-1. Import Verilog modules into your synthesis tool.  
-2. Configure FPGA device and clock constraints.  
-3. Synthesize the design and generate bitstream.  
-4. Load onto FPGA and test functionality on hardware.  
 
 ---
 
@@ -83,10 +82,5 @@ A Verilog-based **UART (Universal Asynchronous Receiver/Transmitter)** design in
 
 This project is licensed under the MIT License.  
 
----
-
-<p align="center">
-  Made with ❤️ by <a href="https://github.com/SUHANI102003">Suhani Jain</a>
-</p>
 
 
