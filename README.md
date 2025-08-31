@@ -129,6 +129,13 @@ An oversampling scheme of 16x will be used to estimate the middle point of the d
 
 ---
 
+## Results
+
+### RTL Schematic
+<img width = "700" height = "600" src = "https://github.com/SUHANI102003/UART-FIFO/blob/main/assets/Screenshot%202025-08-31%20130122.png" />
+
+### Synthesis Schematic
+
 ## 📜 License
 
 This project is licensed under the MIT License.  
