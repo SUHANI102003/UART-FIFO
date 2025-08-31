@@ -129,12 +129,39 @@ An oversampling scheme of 16x will be used to estimate the middle point of the d
 
 ---
 
-## Results
+## Schematic
 
 ### RTL Schematic
 <img width = "700" height = "600" src = "https://github.com/SUHANI102003/UART-FIFO/blob/main/assets/Screenshot%202025-08-31%20130122.png" />
 
 ### Synthesis Schematic
+<img width = "700" height = "600" src = "https://github.com/SUHANI102003/UART-FIFO/blob/main/assets/Screenshot%202025-08-31%20130611.png" />
+
+
+---
+
+## Results
+
+### UART Top
+<img width = "1000" height = "700" src = "https://github.com/SUHANI102003/UART-FIFO/blob/main/SIM/uart_waveform.png" />
+
+<img width = "500" height = "300" src = "https://github.com/SUHANI102003/UART-FIFO/blob/main/SIM/uart_console.png" />
+
+---
+
+### UART Transmitter
+<img width = "1000" height = "700" src = "https://github.com/SUHANI102003/UART-FIFO/blob/main/SIM/tx_sim.png" />
+
+<img width = "500" height = "200" src = "https://github.com/SUHANI102003/UART-FIFO/blob/main/SIM/tx_console.png" />
+
+---
+
+### UART Receiver
+<img width = "1000" height = "700" src = "https://github.com/SUHANI102003/UART-FIFO/blob/main/SIM/rx_waveform.png" />
+
+<img width = "500" height = "100" src = "https://github.com/SUHANI102003/UART-FIFO/blob/main/SIM/rx_console.png" />
+
+---
 
 ## 📜 License
 
