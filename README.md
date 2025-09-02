@@ -177,8 +177,7 @@ Since the transfer is **asynchronous**, the receiver and transmitter must agree 
 
 ## 🏆 Tools Used  
 
-![](https://img.shields.io/badge/Simulator-ModelSim-yellow?style=for-the-badge)  
-![](https://img.shields.io/badge/FPGA-Vivado-orange?style=for-the-badge)  
+![](https://img.shields.io/badge/Simulator-Vivado-orange?style=for-the-badge)  
 ![](https://img.shields.io/badge/Language-Verilog-blue?style=for-the-badge)  
 
 ---
